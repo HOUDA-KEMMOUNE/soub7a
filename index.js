@@ -28,31 +28,29 @@ count1 = document.getElementById("count1");
 count2 = document.getElementById("count2");
 count3 = document.getElementById("count3");
 
-let first = 0;
-function ft_firstButt() {
-  count++;
-  first++;
-  count_el.innerText = count;
-  count1.innerText = first;
-  return count;
-}
 
-let second = 0;
-function ft_secondButt() {
-  count++;
-  second++;
-  count_el.innerText = count;
-  count2.innerText = second;
-  return count;
-}
+let button_obj = 
+{
+  button1_obj: {
+    count_in_obj: 0,
+    display: count1,
+  },
+  button2_obj: {
+    count_in_obj: 0,
+    display: count2,
+  },
+  button3_obj: {
+    count_in_obj: 0,
+    display: count3,
+  },
+};
 
-let third = 0;
-function ft_thirdButt() {
+function  ft_increment(which_button)
+{
   count++;
-  third++;
+  button_obj[which_button].count_in_obj++;
   count_el.innerText = count;
-  count3.innerText = third;
-  return count;
+  button_obj[which_button].display.innerText = button_obj[which_button].count_in_obj;
 }
 
 function ft_refreshButt() {
@@ -67,7 +65,6 @@ function ft_refreshButt() {
 }
 
 refresh.onclick = ft_refreshButt;
-button1.onclick = ft_firstButt;
-button2.onclick = ft_secondButt;
-button3.onclick = ft_thirdButt;
-button1.onclick = ft_firstButt;
+button1.onclick = () => ft_increment("button1_obj");
+button2.onclick = () => ft_increment("button2_obj");
+button3.onclick = () => ft_increment("button3_obj");

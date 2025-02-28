@@ -8,10 +8,12 @@ body {
 }
 
 .container {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 300px;
+  /* padding-top: 300px; */
 }
 
 .content {
@@ -20,7 +22,7 @@ body {
   align-items: center;
   width: 45%;
   height: 650px;
-  /* margin-top: 50px; */
+  margin-top: 50px;
   padding-top: 30px;
   background-color: #8a8fad;
   border: 1px solid #1b2042;
@@ -108,4 +110,13 @@ body {
 #text3 {
   color: rgb(222, 219, 199);
   font-family: monospace;
+}
+
+@media (max-width: 964px) and (min-width: 666.67px)
+{
+  .content {
+    font-size: 15px;
+    width: 70%;
+  height: 650px;
+  }
 }
