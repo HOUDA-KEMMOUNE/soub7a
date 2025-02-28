@@ -55,13 +55,14 @@ function  ft_increment(which_button)
 
 function ft_refreshButt() {
   count = 0;
-  first = 0;
-  second = 0;
-  third = 0;
+  button_obj["button1_obj"].count_in_obj = 0;
+  button_obj["button2_obj"].count_in_obj = 0;
+  button_obj["button3_obj"].count_in_obj = 0;
+  
   count_el.innerText = count;
-  count1.innerText = first;
-  count2.innerText = second;
-  count3.innerText = third;
+  count1.innerText = button_obj["button1_obj"].count_in_obj;
+  count2.innerText = button_obj["button2_obj"].count_in_obj;
+  count3.innerText = button_obj["button3_obj"].count_in_obj;
 }
 
 refresh.onclick = ft_refreshButt;
